@@ -1,0 +1,81 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/logo.png';
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/products', label: 'Products' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const currentPath = new URL(Astro.request.url).pathname;
+---
+
+<header class="sticky top-0 z-50 bg-sand-50/95 backdrop-blur">
+  <div class="h-1 bg-gradient-to-r from-teal-600 via-teal-500 to-amber-500"></div>
+
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <a href="/" class="shrink-0">
+      <Image src={logo} alt="Transocean Exim Solutions" height={40} width={144} class="h-10 w-auto" />
+    </a>
+
+    <nav class="hidden gap-8 md:flex">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'text-sm font-medium transition-colors hover:text-amber-500',
+              currentPath === link.href ? 'text-teal-700' : 'text-navy-700/70',
+            ]}
+            aria-current={currentPath === link.href ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <button
+      type="button"
+      class="inline-flex items-center justify-center rounded-md p-2 text-teal-700 md:hidden"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      id="menu-toggle"
+    >
+      <span class="sr-only">Toggle menu</span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-6 w-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      </svg>
+    </button>
+  </div>
+
+  <nav id="mobile-menu" class="hidden flex-col border-t border-teal-900/10 px-4 pb-4 md:hidden">
+    {
+      links.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'block py-2 text-sm font-medium transition-colors hover:text-amber-500',
+            currentPath === link.href ? 'text-teal-700' : 'text-navy-700/70',
+          ]}
+          aria-current={currentPath === link.href ? 'page' : undefined}
+        >
+          {link.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('flex');
+    menu?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
+  });
+</script>

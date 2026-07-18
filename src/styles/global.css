@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0f2436;
+  --color-navy-950: #0a1a29;
+  --color-navy-900: #0f2436;
+  --color-navy-800: #16344c;
+  --color-navy-700: #1f4863;
+  --color-navy-600: #2c5f7c;
+
+  --color-sand-50: #faf7f2;
+  --color-sand-100: #f4eee2;
+  --color-sand-200: #e7dcc6;
+  --color-sand-300: #d8c6a2;
+
+  --color-husk-600: #8a5a34;
+  --color-husk-700: #714a2b;
+
+  --color-amber-300: #e4b567;
+  --color-amber-400: #d9a441;
+  --color-amber-500: #c48a2e;
+  --color-amber-600: #a86f1f;
+
+  --color-teal-50: #eafaf6;
+  --color-teal-100: #cdf0e6;
+  --color-teal-600: #16897a;
+  --color-teal-700: #0f6459;
+  --color-teal-800: #0c5049;
+  --color-teal-900: #0a3d38;
+  --color-teal-950: #062824;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-sand-50);
+  color: var(--color-ink);
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}

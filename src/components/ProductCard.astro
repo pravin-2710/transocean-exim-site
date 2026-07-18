@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import SpecTable from './SpecTable.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  product: CollectionEntry<'products'>;
+}
+
+const { product } = Astro.props;
+const { name, weight, shelfLife, packingType, nutsPerBag, fclQuantity, image } = product.data;
+
+const rows = [
+  { label: 'Weight', value: weight },
+  { label: 'Shelf life', value: shelfLife },
+  { label: 'Packing type', value: packingType },
+  { label: 'Nuts per bag', value: String(nutsPerBag) },
+  { label: 'FCL quantity', value: fclQuantity },
+];
+---
+
+<article class="flex flex-col overflow-hidden rounded-lg border border-teal-900/10 bg-white">
+  <Image src={image} alt={name} width={640} height={480} class="h-56 w-full object-cover" />
+  <div class="flex flex-1 flex-col gap-4 p-6">
+    <h3 class="text-lg font-semibold text-navy-900">{name}</h3>
+    <SpecTable rows={rows} />
+  </div>
+</article>

@@ -1,0 +1,53 @@
+---
+interface Cta {
+  text: string;
+  href: string;
+}
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  primaryCta?: Cta;
+  secondaryCta?: Cta;
+}
+
+const { eyebrow, title, subtitle, primaryCta, secondaryCta } = Astro.props;
+---
+
+<section class="border-b border-teal-900/20 bg-teal-700 text-white">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-20 sm:px-6 md:grid-cols-2 lg:px-8">
+    <div>
+      {eyebrow && <p class="text-sm font-semibold uppercase tracking-widest text-amber-400">{eyebrow}</p>}
+      <h1 class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">{title}</h1>
+      {subtitle && <p class="mt-4 max-w-xl text-lg text-sand-100/80">{subtitle}</p>}
+
+      {
+        (primaryCta || secondaryCta) && (
+          <div class="mt-8 flex flex-wrap gap-4">
+            {primaryCta && (
+              <a
+                href={primaryCta.href}
+                class="inline-flex items-center rounded-md bg-amber-500 px-5 py-3 text-sm font-semibold text-teal-950 transition-colors hover:bg-amber-400"
+              >
+                {primaryCta.text}
+              </a>
+            )}
+            {secondaryCta && (
+              <a
+                href={secondaryCta.href}
+                class="inline-flex items-center rounded-md border border-white/30 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-amber-400 hover:text-amber-400"
+              >
+                {secondaryCta.text}
+              </a>
+            )}
+          </div>
+        )
+      }
+    </div>
+
+    <div class="hidden md:block">
+      <slot name="illustration" />
+    </div>
+  </div>
+</section>
