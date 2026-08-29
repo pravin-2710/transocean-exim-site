@@ -1,0 +1,165 @@
+{
+  "theme": "light",
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Satoshi",
+    "fallback_heading": "Clash Display, serif",
+    "fallback_body": "Manrope, sans-serif",
+    "scale": {
+      "h1": "text-5xl md:text-6xl+ tracking-tighter leading-none font-black",
+      "h2": "text-4xl md:text-5xl tracking-tight leading-tight font-bold",
+      "h3": "text-2xl md:text-3xl tracking-tight leading-snug font-medium",
+      "body": "text-base md:text-lg leading-relaxed font-normal",
+      "overline": "text-xs uppercase tracking-[0.2em] font-semibold"
+    },
+    "rules": [
+      "NEVER use Inter, Roboto, or standard sans-serifs for headings.",
+      "Headings must have tight tracking (tracking-tight or tracking-tighter).",
+      "Overlines/labels must be highly tracked (tracking-[0.2em]) and uppercase."
+    ]
+  },
+  "colors": {
+    "primary": {
+      "deep_palm_green": "#0B3B24",
+      "forest_shade": "#134E2E",
+      "mint_glow": "#D1E8E2"
+    },
+    "neutral": {
+      "crisp_white": "#FFFFFF",
+      "bone": "#F8FAFC",
+      "sand": "#EADDCA",
+      "charcoal": "#1C1C1C"
+    },
+    "accent": {
+      "camel": "#C19A6B",
+      "dark_brown": "#8B5A2B"
+    },
+    "rules": [
+      "Rely heavily on Deep Palm Green and Crisp White for authoritative contrast.",
+      "Use Camel/Dark Brown accents for interactive states, borders, and warm highlights.",
+      "Never use pure black; use charcoal tinted with green (#1A211D) for dark text.",
+      "No purple or blue gradients. Use noise/grain textures instead of glossy gradients."
+    ]
+  },
+  "visual_enhancers": {
+    "surfaces": [
+      "Solid crisp backgrounds for marketing sections to maintain a clean editorial look.",
+      "Use 'Crystal Glass' (backdrop-blur-xl bg-white/70 with 1px border-white/20) for sticky nav.",
+      "Admin dashboard should use 'Grid Borders' (border-collapse, 1px subtle border-border)."
+    ],
+    "shadows": [
+      "Use soft, diffuse ambient shadows (shadow-[0_8px_32px_rgba(11,59,36,0.06)]) for product cards.",
+      "Do not use heavy, muddy shadows."
+    ],
+    "borders": [
+      "1px delicate inner stroke to separate sections, using very subtle sand or green tint (border-[#EADDCA] or border-[#0B3B24]/10)."
+    ],
+    "textures": [
+      "Apply subtle grain/noise overlay on the hero or dark-green sections to kill digital flatness."
+    ]
+  },
+  "components": {
+    "buttons": "Pill-shaped or sharp rectangular buttons. Primary: bg-deep_palm_green text-white hover:bg-forest_shade transition-transform. Include hover lift (-translate-y-1).",
+    "inputs": "Use Shadcn forms. Customize with 1px border-neutral-300, focus:ring-1 focus:ring-deep_palm_green focus:border-deep_palm_green.",
+    "cards": "For product showcase, use clipped frames/spotlight treatment. Not generic standard cards. Use asymmetric image placements and sharp typographic hierarchy.",
+    "marquee": "One slow editorial marquee for clients/certifications using react-fast-marquee. Serif or clean Mono, low contrast colors (e.g. pale green bg + dark green text), wide gap (gap-24).",
+    "libraries": [
+      "lucide-react (Icons)",
+      "framer-motion (Animations)",
+      "@studio-freight/lenis (Smooth Scrolling)",
+      "react-fast-marquee (Editorial Ribbon)"
+    ]
+  },
+  "grids_and_layouts": {
+    "marketing_pages": [
+      "Mobile-first responsive (always). Start with grid-cols-1.",
+      "Use The Swiss Grid, overlapping elements, and aggressive asymmetry.",
+      "Use generous spacing: p-8, p-12, p-24, py-32.",
+      "Do NOT use standard Bootstrap columns. Avoid generic centered card grids."
+    ],
+    "admin_dashboard": [
+      "High Density Grid: grid-cols-1 md:grid-cols-4. Tight gaps (gap-4 or gap-6).",
+      "No rounded corners on cards (sharp edges, cardless look). 1px subtle borders."
+    ]
+  },
+  "motion": {
+    "hero_reveal": "Kinetic Hero with masked line-by-line heading reveal using framer-motion (overflow-hidden on text lines, translateY from 100% to 0).",
+    "scrolling": "MANDATORY: Use Lenis for smooth scrolling momentum.",
+    "scroll_reveals": "Use framer-motion for subtle fade-up and parallax effects on images.",
+    "parallax": "One subtle parallax or 3D hero moment. Images moving at different speeds on scroll."
+  },
+  "media": {
+    "hero_and_landscape": [
+      {
+        "url": "https://images.unsplash.com/photo-1744358399532-9769248a6d58?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwxfHxjb2NvbnV0JTIwaGFydmVzdCUyMGZhcm18ZW58MHx8fHwxNzg4MDIwMzkwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Green fields and palm trees under a clear sky. Use for Hero or About page."
+      }
+    ],
+    "products": [
+      {
+        "category": "Semi Husked Coconut",
+        "url": "https://images.unsplash.com/photo-1560769680-ba2f3767c785?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxzZW1pJTIwaHVza2VkJTIwY29jb251dHxlbnwwfHx8fDE3ODgwMjAzOTB8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Coconuts on white surface. Treat deliberately with spotlight or clipped frames."
+      },
+      {
+        "category": "Green Tender Coconut",
+        "url": "https://images.unsplash.com/photo-1743947064239-ca8bc9f97806?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxncmVlbiUyMHRlbmRlciUyMGNvY29udXR8ZW58MHx8fHwxNzg4MDIwMzkwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Yellow/green coconuts on a table."
+      },
+      {
+        "category": "Dry Coconut Copra",
+        "url": "https://images.unsplash.com/photo-1603779046675-2eccbab9b982?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxkcnklMjBjb2NvbnV0fGVufDB8fHx8MTc4ODAyMDM5N3ww&ixlib=rb-4.1.0&q=85",
+        "description": "Brown coconut halves on wooden table."
+      }
+    ],
+    "logistics_and_export": [
+      {
+        "url": "https://images.unsplash.com/photo-1605745341112-85968b19335b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxjYXJnbyUyMHNoaXAlMjBjb250YWluZXIlMjBleHBvcnR8ZW58MHx8fHwxNzg4MDIwMzkwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Cargo ship. Great for logistics/export process section."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1560493676-04071c5f467b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwxfHxhZ3JpY3VsdHVyZSUyMGJ1c2luZXNzJTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc4ODAyMDM5MHww&ixlib=rb-4.1.0&q=85",
+        "description": "Green crops at sunset. Great for About section."
+      }
+    ],
+    "testimonials": [
+      {
+        "url": "https://images.pexels.com/photos/37148308/pexels-photo-37148308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Professional man smiling."
+      },
+      {
+        "url": "https://images.pexels.com/photos/27086922/pexels-photo-27086922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Professional woman smiling indoors."
+      }
+    ],
+    "textures": [
+      {
+        "url": "https://images.unsplash.com/photo-1629197520635-16570fbd0bb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGFic3RyYWN0JTIwdGV4dHVyZXxlbnwwfHx8fDE3ODgwMjAzOTd8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Green textile abstract texture. Can be used for parallax/3D hero overlay."
+      }
+    ]
+  },
+  "accessibility": {
+    "contrast": "Ensure all text against deep green or images meets WCAG AA 4.5:1 ratio. Use drop-shadow or dark gradients behind text on images if necessary.",
+    "testing": "All interactive elements, inputs, buttons, and links MUST have data-testid attributes (e.g. data-testid='quote-submit-btn')."
+  },
+  "instructions_to_main_agent": [
+    "BUILD A HYBRID APP: A high-end marketing site + Admin dashboard.",
+    "Do not use generic UI card grids for the marketing pages. Implement an asymmetric bento or overlapping editorial layout.",
+    "Implement the hero section with a bold heading: 'Bridging Borders, Building Opportunities: Bringing India's Finest Coconuts to the World'. Apply a masked line-by-line reveal animation using framer-motion.",
+    "Integrate a prominent 'Request Quote' sticky navigation.",
+    "Create a rich Customer Enquiry form with country code dropdown and multi-select product fields.",
+    "Create an Admin dashboard (leads table, status filter, update, CSV export). Use dense grid layouts and strict borders.",
+    "For the About page, use numbered manifesto chapters and an export process timeline.",
+    "Ensure the hero has a subtle scroll-based parallax effect.",
+    "Add 'data-testid' to ALL interactive elements."
+  ],
+  "universal_guidelines": [
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Never apply universal transitions (e.g. transition: all). Add explicit transitions for specific properties.",
+    "Never center-align the main app container.",
+    "Always use modern button styles with hover feedback and right colors.",
+    "Never use placeholder image URLs. Use the provided media URLs.",
+    "All .js files must adhere to standard React component patterns with JSX (no TypeScript)."
+  ]
+}

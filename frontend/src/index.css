@@ -1,0 +1,70 @@
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800,900&f[]=satoshi@400,500,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 140 13% 12%;
+        --card: 0 0% 100%;
+        --card-foreground: 140 13% 12%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 140 13% 12%;
+        --primary: 151 69% 14%;
+        --primary-foreground: 150 33% 94%;
+        --secondary: 33 36% 89%;
+        --secondary-foreground: 151 69% 14%;
+        --muted: 36 20% 94%;
+        --muted-foreground: 150 8% 40%;
+        --accent: 30 40% 59%;
+        --accent-foreground: 151 69% 14%;
+        --destructive: 0 72% 45%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 36 22% 86%;
+        --input: 36 22% 80%;
+        --ring: 151 69% 14%;
+        --radius: 0.25rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Satoshi', 'Manrope', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    ::selection {
+        background: #0B3B24;
+        color: #D1E8E2;
+    }
+}
+
+@layer utilities {
+    .font-display {
+        font-family: 'Cabinet Grotesk', 'Clash Display', serif;
+    }
+    .grain::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.07;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+[data-debug-wrapper="true"] {
+    display: contents !important;
+}
