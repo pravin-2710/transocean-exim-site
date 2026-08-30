@@ -13,12 +13,12 @@ const CHAPTERS = [
   {
     no: "02",
     title: "Hygienic processing",
-    text: "Our Pune facility runs automated washing, grading and de-husking lines under HACCP protocols. Uniformed staff, food-grade surfaces, and batch traceability from farm to container.",
+    text: "Our Pune operations follow documented washing, grading and de-husking controls. Trained staff, food-grade surfaces, and batch traceability protect every lot from farm to container.",
   },
   {
     no: "03",
     title: "Compliance without excuses",
-    text: "APEDA registration, FSSAI licensing, ISO 22000 and phytosanitary certification for every shipment. Documentation arrives before your vessel does.",
+    text: "APEDA registration, DGFT import-export credentials, FSSAI licensing and shipment-specific phytosanitary documentation. Paperwork arrives before your vessel does.",
   },
   {
     no: "04",
@@ -118,12 +118,21 @@ export default function AboutPage() {
               Sealed, certified, audit-ready.
             </h2>
           </FadeUp>
-          <div className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
             {CERTIFICATIONS.map((c, i) => (
-              <FadeUp key={c} delay={i * 0.05}>
-                <div data-testid={`cert-${i}`} className="flex h-full items-start gap-3 bg-bone p-7 transition-colors duration-500 hover:bg-sand/40">
-                  <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-cocoa" strokeWidth={1.8} />
-                  <p className="text-sm font-semibold leading-snug text-ink/80">{c}</p>
+              <FadeUp key={c.id} delay={i * 0.05}>
+                <div data-testid={`cert-${c.id}`} className="flex min-h-36 h-full items-center gap-5 bg-bone p-7 transition-colors duration-500 hover:bg-sand/40">
+                  {c.logo ? (
+                    <img src={c.logo} alt="" className="h-16 w-20 shrink-0 object-contain mix-blend-multiply" loading="lazy" />
+                  ) : (
+                    <span className="grid h-16 w-20 shrink-0 place-items-center border border-camel/40">
+                      <BadgeCheck className="h-6 w-6 text-cocoa" strokeWidth={1.8} />
+                    </span>
+                  )}
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cocoa">{c.short}</p>
+                    <p className="mt-1 text-sm font-semibold leading-snug text-ink/80">{c.name}</p>
+                  </div>
                 </div>
               </FadeUp>
             ))}

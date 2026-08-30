@@ -6,6 +6,7 @@ import "@/App.css";
 import { AuthProvider, useAuth } from "@/context/AuthContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import HomePage from "@/pages/HomePage";
 import ProductsPage from "@/pages/ProductsPage";
 import AboutPage from "@/pages/AboutPage";
@@ -53,6 +54,7 @@ function MarketingLayout({ children }) {
     <>
       <Navbar />
       <main>{children}</main>
+      <WhatsAppButton />
       <Footer />
     </>
   );

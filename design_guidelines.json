@@ -32,7 +32,8 @@
     },
     "accent": {
       "camel": "#C19A6B",
-      "dark_brown": "#8B5A2B"
+      "dark_brown": "#8B5A2B",
+      "whatsapp_green": "#25D366"
     },
     "rules": [
       "Rely heavily on Deep Palm Green and Crisp White for authoritative contrast.",
@@ -63,11 +64,13 @@
     "inputs": "Use Shadcn forms. Customize with 1px border-neutral-300, focus:ring-1 focus:ring-deep_palm_green focus:border-deep_palm_green.",
     "cards": "For product showcase, use clipped frames/spotlight treatment. Not generic standard cards. Use asymmetric image placements and sharp typographic hierarchy.",
     "marquee": "One slow editorial marquee for clients/certifications using react-fast-marquee. Serif or clean Mono, low contrast colors (e.g. pale green bg + dark green text), wide gap (gap-24).",
+    "floating_action": "Floating WhatsApp button: fixed bottom-6 right-6, rounded-full bg-[#25D366] text-white shadow-lg hover:scale-110 transition-transform. z-50.",
     "libraries": [
       "lucide-react (Icons)",
       "framer-motion (Animations)",
       "@studio-freight/lenis (Smooth Scrolling)",
-      "react-fast-marquee (Editorial Ribbon)"
+      "react-fast-marquee (Editorial Ribbon)",
+      "sonner (Toasts)"
     ]
   },
   "grids_and_layouts": {
@@ -91,8 +94,8 @@
   "media": {
     "hero_and_landscape": [
       {
-        "url": "https://images.unsplash.com/photo-1744358399532-9769248a6d58?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwxfHxjb2NvbnV0JTIwaGFydmVzdCUyMGZhcm18ZW58MHx8fHwxNzg4MDIwMzkwfDA&ixlib=rb-4.1.0&q=85",
-        "description": "Green fields and palm trees under a clear sky. Use for Hero or About page."
+        "url": "https://images.unsplash.com/photo-1527160666479-3131d2b7042d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxjb2NvbnV0JTIwZmFybXxlbnwwfHx8fDE3ODgwMjMwOTN8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Coconut farm with palm trees on green grass field. Replace the old factory image with this to reflect a natural farm setting for the Hero."
       }
     ],
     "products": [
@@ -108,8 +111,8 @@
       },
       {
         "category": "Dry Coconut Copra",
-        "url": "https://images.unsplash.com/photo-1603779046675-2eccbab9b982?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxkcnklMjBjb2NvbnV0fGVufDB8fHx8MTc4ODAyMDM5N3ww&ixlib=rb-4.1.0&q=85",
-        "description": "Brown coconut halves on wooden table."
+        "url": "https://images.unsplash.com/photo-1580984969071-a8da5656c2fb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHw0fHxkcnklMjBjb2NvbnV0fGVufDB8fHx8MTc4ODAyMzA5OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Accurate dry coconut halves (Copra) on a dark surface. Replaces the previously incorrect copra photo."
       }
     ],
     "logistics_and_export": [
@@ -145,14 +148,14 @@
   },
   "instructions_to_main_agent": [
     "BUILD A HYBRID APP: A high-end marketing site + Admin dashboard.",
+    "HERO UPDATE: Change the Home page background image from the coconut factory to the coconut farm image provided in the media list.",
+    "COPRA PHOTO UPDATE: Regenerate the 'Dry Coconut Copra' photo with the new accurate reference provided in the media list.",
+    "CERTIFICATIONS: Update the scrolling marquee or certifications list. Add 'DGFT' and 'FSSAI'. Keep 'APEDA' and 'Coconut Development Board'. Remove 'HACCP' and 'ISO 22000'.",
+    "WHATSAPP BUTTON: Add a floating WhatsApp chat button fixed to the bottom right. This is for Gulf and APAC buyers to instantly reach the export desk.",
+    "QUOTE FORM: Update the 'Request Quote' form submission logic to send the quote request details mail to 'info@transoceanexim.com'. Show a success state using Sonner toast on submission.",
     "Do not use generic UI card grids for the marketing pages. Implement an asymmetric bento or overlapping editorial layout.",
-    "Implement the hero section with a bold heading: 'Bridging Borders, Building Opportunities: Bringing India's Finest Coconuts to the World'. Apply a masked line-by-line reveal animation using framer-motion.",
-    "Integrate a prominent 'Request Quote' sticky navigation.",
-    "Create a rich Customer Enquiry form with country code dropdown and multi-select product fields.",
     "Create an Admin dashboard (leads table, status filter, update, CSV export). Use dense grid layouts and strict borders.",
-    "For the About page, use numbered manifesto chapters and an export process timeline.",
-    "Ensure the hero has a subtle scroll-based parallax effect.",
-    "Add 'data-testid' to ALL interactive elements."
+    "Ensure the hero has a subtle scroll-based parallax effect and the marquee maintains a smooth editorial pace."
   ],
   "universal_guidelines": [
     "Create depth through layered design elements with z-index hierarchy.",

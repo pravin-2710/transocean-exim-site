@@ -37,7 +37,7 @@ export const PRODUCTS = [
     id: "copra",
     name: "Coconut Copra",
     tagline: "High-oil, food-grade dried kernel",
-    image: "/images/copra.png",
+    image: "/images/copra-export.jpg",
     number: "03",
     description:
       "Sun and kiln dried copra cups milled from selected mature nuts. Low moisture, high oil recovery, and a clean white cup — graded for oil mills, confectionery and desiccated coconut processors worldwide.",
@@ -53,14 +53,40 @@ export const PRODUCTS = [
 ];
 
 export const CERTIFICATIONS = [
-  "APEDA Registered Exporter",
-  "FSSAI Licensed Facility",
-  "ISO 22000:2018 Certified",
-  "HACCP Compliant",
-  "Phytosanitary Certified",
-  "FIEO Member",
-  "IEC · DGFT Registered",
-  "Spice Board · CDB Empanelled",
+  {
+    id: "apeda",
+    short: "APEDA",
+    name: "APEDA Registered Exporter",
+    logo: "/images/certifications/apeda.png",
+  },
+  {
+    id: "fssai",
+    short: "FSSAI",
+    name: "FSSAI Licensed Export Operations",
+    logo: "/images/certifications/fssai.jpg",
+  },
+  {
+    id: "dgft",
+    short: "DGFT · IEC",
+    name: "DGFT Registered · Import Export Code",
+    logo: "/images/certifications/dgft.jpg",
+  },
+  {
+    id: "coconut-development-board",
+    short: "Coconut Development Board",
+    name: "Coconut Development Board Registered",
+    logo: "/images/certifications/coconut-development-board.jpg",
+  },
+  {
+    id: "phytosanitary",
+    short: "Phytosanitary",
+    name: "Phytosanitary Documentation Available",
+  },
+  {
+    id: "fieo",
+    short: "FIEO",
+    name: "Federation of Indian Export Organisations Member",
+  },
 ];
 
 export const CLIENTS = [
@@ -131,17 +157,18 @@ export const VOLUMES = [
 export const LEAD_STATUSES = ["New", "Contacted", "Quoted", "Negotiation", "Won", "Closed"];
 
 export const GALLERY = [
-  { src: "/images/hero.png", caption: "Graded & ready for dispatch", span: "wide" },
+  { src: "/images/hero-farm.jpg", caption: "Partner coconut farms, South India", span: "wide" },
   { src: "/images/semi-husked.png", caption: "Semi husked, export grade", span: "tall" },
   { src: "/images/farm.png", caption: "Partner farms, South India", span: "normal" },
   { src: "/images/tender.png", caption: "Green tender coconuts, cold-chain ready", span: "normal" },
   { src: "/images/facility.png", caption: "Sourcing regions at golden hour", span: "tall" },
-  { src: "/images/copra.png", caption: "Sun-dried copra, < 6% moisture", span: "normal" },
+  { src: "/images/copra-export.jpg", caption: "Sun-dried copra, < 6% moisture", span: "normal" },
   { src: "/images/packing.png", caption: "Container dispatch, Nhava Sheva port", span: "wide" },
 ];
 
 export const CONTACT = {
   phone: "+91-9168007595",
+  whatsapp: "919168007595",
   email: "info@transoceanexim.com",
   location: "Pune, Maharashtra, India",
 };

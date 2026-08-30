@@ -1,6 +1,12 @@
 import axios from "axios";
 
-export const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const backendUrl = document.querySelector('meta[name="backend-url"]')?.getAttribute("content")?.trim();
+
+if (!backendUrl || backendUrl.includes("REACT_APP_BACKEND_URL")) {
+  throw new Error("REACT_APP_BACKEND_URL is not configured.");
+}
+
+export const API = `${backendUrl.replace(/\/+$/, "")}/api`;
 
 export const api = axios.create({ baseURL: API });
 
